@@ -85,7 +85,6 @@ Feature: DB_sorgulama
     # ve olusturdugum kayidin User listesinde oldugunu dogrulayabilmeliyim.
 
     #INSERT INTO u480337000_tlb_training.users(first_name, last_name, username, email, id, role_id, password) values ('ahmet', 'karli', 'karliahmet', 'ahmetkarli@gmail.com', 72,2, '123123123');
-  @deneme
   Scenario Outline:
         * Database baglantisi kurulur.
         * "<first_name>","<last_name>","<username>","<email>","<id>","<role_id>","<password>" girilerek user kaydi olusturulur.
@@ -102,7 +101,3 @@ Feature: DB_sorgulama
 
 
 
-  @deneme
-  Scenario:
-    Given Database baglantisi kurulur.
-    And elemanlar listelenir

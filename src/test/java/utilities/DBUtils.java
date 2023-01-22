@@ -27,6 +27,17 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+    public static void myCreateConnection() {
+        String url=ConfigReader.getProperty("myCredentialsUrl");
+        String username=ConfigReader.getProperty("myUsername");
+        String password=ConfigReader.getProperty("myPassword");
+        try {
+            connection = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
     //BU METHODU COK KULLANACAGIZ
     //Bu method DatabaDBUTilsse e baglandiktan sonra Yazilan query yi calistirmak icin

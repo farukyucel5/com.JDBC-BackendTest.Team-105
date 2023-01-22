@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="3.616">
-    <testcase classname="DB_sorgulama" name="_2" time="2.109">
-        <system-out><![CDATA[* Database baglantisi kurulur...............................................passed
-* "Mr. Nobody","has just","passed by the Database market","farukbak@gmail.com","101","2","123123123" girilerek user kaydi olusturulur..passed
-* users tablosundaki "id" ler listte listelenir.............................passed
-* OLusturulan User'in "101" sinin listede oldugu dogrulanir.................passed
-* Database baglantisi kapatilir.............................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="1.407">
+    <testcase classname="localDb" name="_2" time="0.885">
+        <system-out><![CDATA[Given Local database baglantisi kurulur.....................................passed
+And elemanlar listelenir....................................................passed
+Then listede "111" olup olmadığı dogrulanır.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="DB_sorgulama" name="_3" time="1.096">
-        <system-out><![CDATA[Given Database baglantisi kurulur...........................................passed
+    <testcase classname="localDb" name="_3" time="0.054">
+        <system-out><![CDATA[Given Local database baglantisi kurulur.....................................passed
 And elemanlar listelenir....................................................passed
+Then listede "114" olup olmadığı dogrulanır.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="localDb" name="_4" time="0.05">
+        <system-out><![CDATA[Given Local database baglantisi kurulur.....................................passed
+And elemanlar listelenir....................................................passed
+Then listede "115" olup olmadığı dogrulanır.................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

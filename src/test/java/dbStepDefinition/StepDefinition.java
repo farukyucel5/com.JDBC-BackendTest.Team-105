@@ -4,6 +4,7 @@ package dbStepDefinition;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 
 import java.sql.SQLException;
@@ -122,14 +123,6 @@ public class StepDefinition {
     public void users_tablosundaki_ler_listte_listelenir(String id) {
         UsersIdList= getColumnData( "SELECT * FROM u480337000_tlb_training.users",id);
         System.out.println(UsersIdList);
-    }
-
-
-    @And("elemanlar listelenir")
-    public void elemanlarListelenir() {
-       List<List<Object>> staffIdList1=getQueryResultList("SELECT * FROM u480337000_tlb_training.users");
-
-       staffIdList1.forEach(System.out::println);
     }
 }
 
