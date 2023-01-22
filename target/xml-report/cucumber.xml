@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.435">
+    <testcase classname="DB_sorgulama" name="_2" time="2.052">
+        <system-out><![CDATA[* Database baglantisi kurulur...............................................passed
+* "8" numarasi verilen customerin "bolu" güncellenir........................passed
+* customer "address" tablosundaki adsress bilgileri listelenir..............passed
+* "bolu" guncellendigi dogrulanir...........................................passed
+* Database baglantisi kapatilir.............................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
