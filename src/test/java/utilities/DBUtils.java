@@ -17,9 +17,9 @@ public class DBUtils {
     //Bu method u data cok BeforeMethod icinde setup icin kullanacagiz
 
     public static void createConnection() {
-        String url="jdbc:mysql://45.84.206.41:3306/u480337000_tlb_training";
-        String username="u480337000_tbl_training_u";
-        String password="pO9#4bmxU";
+        String url=ConfigReader.getProperty("db_credentials_url");
+        String username=ConfigReader.getProperty("db_username");
+        String password=ConfigReader.getProperty("db_password");
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -32,12 +32,7 @@ public class DBUtils {
     //Bu method DatabaDBUTilsse e baglandiktan sonra Yazilan query yi calistirmak icin
     //Bu method da statement ve resultset objesini olusturup query run ediyoruz
     public static void executeQuery(String query) {
-        try {
-            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+       statement=getStatement();
         try {
             resultSet = statement.executeQuery(query);
         } catch (SQLException e) {
@@ -81,9 +76,9 @@ public class DBUtils {
     //getConnection method Connection object i olusturmak icin. Bu method create createConnectiondan farkli olarak connection objesi return ediyor
     public static Connection getConnection() {
 
-        String url="jdbc:mysql://45.84.206.41:3306/u480337000_tlb_training";
-        String username="u480337000_tbl_training_u";
-        String password="pO9#4bmxU";
+        String url=ConfigReader.getProperty("db_credentials_url");
+        String username=ConfigReader.getProperty("db_username");
+        String password=ConfigReader.getProperty("db_password");
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
